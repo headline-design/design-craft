@@ -1,0 +1,54 @@
+{
+  "name": "design-craft",
+  "version": "1.0.0",
+  "description": "Production-grade design and development skills for AI coding agents",
+  "author": "HEADLINE Design",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/headline-design/design-craft.git"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "design",
+    "ui",
+    "ux",
+    "skill",
+    "prompt",
+    "tailwind",
+    "shadcn",
+    "v0",
+    "claude",
+    "gemini",
+    "lovable"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./skills/*": "./*/SKILL.md"
+  },
+  "files": [
+    "dist",
+    "v0",
+    "claude",
+    "gemini",
+    "lovable",
+    "SCHEMA.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "validate": "node --loader ts-node/esm scripts/validate.ts",
+    "list-skills": "node --loader ts-node/esm scripts/list-skills.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0",
+    "yaml": "^2.4.0"
+  }
+}
